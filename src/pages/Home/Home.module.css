@@ -1,0 +1,165 @@
+.avatar{
+    width: 300px;
+    height: 300px;
+    border: 3px solid #000;
+    border-radius: 15%;
+}
+.lightavatar{
+    border: 3px solid #000; 
+}
+.darkavatar{
+    border: 3px solid #86FFBD;  
+}
+.colored{
+    color: #86FFBD;
+}
+.txt1{
+    font-size: 45px;
+    margin-bottom: 0;
+}
+.txt2{
+    font-size: 18px;
+    margin-top: 0;
+}
+.btnsty{
+    margin-left: 40px;
+}
+.btn{
+    border: 3px solid #000000;
+    border-radius: 5px;
+    background-color: #86FFBD;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    font-size: 18px;
+    width:190px;
+    height:40px;
+}
+.lightbtn {
+    border: 3px solid #000000;
+    background-color: #86FFBD;
+    color: #000000;   
+}
+.darkbtn {
+    border: 3px solid #ffffff;
+    background-color: #23233E;
+    color: #86FFBD;   
+}
+.btn:hover{
+    background-color: #ffffff;
+    color: #86FFBD;
+}
+.lightbtn:hover{
+    background-color: #ffffff;
+    color: #86FFBD;
+}
+.darkbtn:hover{
+    border: 3px solid #000000;
+    background-color: #86FFBD;
+    color: #23233E;
+}
+.linecontainer {
+    position: relative; 
+    display: inline-block;
+}
+.staticline {
+    position: absolute; 
+    top: 150%;
+    left: 58%; 
+    transform: translateX(-50%); 
+    width: 3px; 
+    height: 2700px; 
+    background-color: #000;
+    z-index: -1;
+}
+.lightstaticline{
+    background-color: #000;  
+}
+.darkstaticline  {
+    background-color: #ffffff;  
+}
+.projtxt{
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    cursor: "pointer";
+}
+.projtxt:hover{
+    color:#86FFBD;
+}
+.projtitle{
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 3px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-bottom: 3px solid #86FFBD;
+}
+.about{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.txtexp{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.txtdt, .txtdt2{
+    float: right;
+    font-size: 14px;
+}
+.subtxt{
+    font-size: 14px;
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #86FFBD;
+    border: 3px solid #000;
+    border-radius: 50%;
+    z-index: 2;
+    margin-left: 18px;
+}
+.lightdot{
+    border: 3px solid #000;
+}
+.darkdot{
+    border: 3px solid #ffffff;
+}
+.logostyle{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    float: right;
+}
+  @media (max-width: 550px) {
+    .staticline{
+        left: 45%; 
+        top: 165%;
+        height: 5000px; 
+    }
+    .btnsty{
+        margin-left: 0px;
+    }
+    .dot{
+        display: none;
+    }
+    .about{
+        margin-left: 18px;
+    }
+    .txtexp{
+        margin-left: 22px;
+    }
+    .projtitle{
+        font-size: 15px;
+    }
+    .projtxt{
+        font-size: 13px;
+    }
+}
+

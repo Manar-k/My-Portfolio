@@ -1,0 +1,26 @@
+*{
+    font-family: "inter";
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    gap: 200px; /* Space between child elements */
+}
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+  
+body.dark {
+    background-color: #23233E;
+    color: #ffffff;
+}
+p{
+    color: #000;
+}
+.light p{
+    color: #000;  
+}
+.dark p{
+    color: #ffffff;  
+}

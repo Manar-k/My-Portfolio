@@ -1,0 +1,24 @@
+.btn{
+    border: 3px solid #000000;
+    border-radius: 5px;
+    background-color: #86FFBD;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+.darkbtn{
+    border: 3px solid #86FFBD; 
+}
+.lightbtn{
+    border: 3px solid #000000; 
+}
+.btn:hover{
+    background-color: #ffffff;
+    color: #86FFBD;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    float: left;
+}

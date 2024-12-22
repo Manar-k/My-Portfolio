@@ -1,0 +1,11 @@
+.header{
+    border-bottom: 3px solid #86FFBD;
+}
+.text{
+    padding-left: 5px;
+}
+@media (max-width: 550px) {
+    .text{
+        padding-left: 15px;
+    }
+}
