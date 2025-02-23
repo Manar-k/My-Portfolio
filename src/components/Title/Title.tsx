@@ -13,8 +13,7 @@ const Title = ({ text, id }: Props) => {
       <br />
       <div className={style.header}>
         <div className="row">
-          <div className="col-3"></div>
-          <div className="col-8">
+          <div className="col-2">
             <h1 className={style.text}>{text}</h1>
           </div>
         </div>
