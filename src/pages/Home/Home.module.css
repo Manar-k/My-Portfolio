@@ -59,7 +59,7 @@
     background-color: #86FFBD;
     color: #23233E;
 }
-.linecontainer {
+/* .linecontainer {
     position: relative; 
     display: inline-block;
 }
@@ -78,7 +78,7 @@
 }
 .darkstaticline  {
     background-color: #ffffff;  
-}
+} */
 .projtxt{
     margin-top: 10px;
     font-size: 16px;

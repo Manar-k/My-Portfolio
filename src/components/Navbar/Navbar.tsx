@@ -38,6 +38,7 @@ const Navbar = ({ sendTheme }: Props) => {
               <a href="#home" className={`${style.astyle} ${style[theme]}`}>
                 Home
               </a>
+              <a href="#Skills">Skills</a>
               <a href="#about">About</a>
               <a href="#Projects">Projects</a>
               <a href="#Experiences">Experiences</a>
