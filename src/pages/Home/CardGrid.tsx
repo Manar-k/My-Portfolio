@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import { useTheme } from "../../components/ThemeContext";
+
+// images
 import alanna1 from "./img/alannapic1.png";
 import alanna2 from "./img/alannapic2.png";
 import alanna3 from "./img/alannapic3.png";
@@ -24,6 +27,7 @@ import terminal from "./img/terminal.png";
 import astro1 from "./img/astro1.png";
 import astro2 from "./img/astro2.png";
 import astro3 from "./img/astro3.png";
+
 const cardRevealStyle = `
   @keyframes cardFadeIn {
     from {
@@ -169,12 +173,54 @@ const cards: Card[] = [
     link: "https://github.com/Manar-k/OpenGL_2d_scene_Astro-Boy",
   },
 ];
+// Theme
+const themes = {
+  light: {
+    wrapper: { background: "#ffffff" },
+    card: {
+      background: "#ffffff",
+      border: "2px solid #000000",
+      boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+    },
+    cardHover: { boxShadow: "0 8px 28px rgba(0,0,0,0.14)" },
+    numberTitle: { color: "#111" },
+    description: { color: "#666" },
+    toggleBtn: { background: "#111", color: "#fff", border: "2px solid #111" },
 
+    button: { background: "#86FFBD", color: "#000", border: "3px solid #000" },
+    buttonHover: { background: "#ffffff", color: "#86FFBD" },
+  },
+  dark: {
+    wrapper: { background: "#1a1a1a" },
+    card: {
+      background: "#1a1a1a",
+      border: "2px solid #86FFBD",
+      boxShadow: "0 2px 16px rgba(134,255,189,0.10)",
+    },
+    cardHover: { boxShadow: "0 8px 32px rgba(134,255,189,0.22)" },
+    numberTitle: { color: "#f0f0f0" },
+    description: { color: "#aaa" },
+    toggleBtn: {
+      background: "transparent",
+      color: "#86FFBD",
+      border: "2px solid #86FFBD",
+    },
+    button: {
+      background: "#1a1a1a",
+      color: "#86FFBD",
+      border: "3px solid #ffffff",
+    },
+    buttonHover: {
+      background: "#86FFBD",
+      color: "#000",
+      border: "3px solid #000",
+    },
+  },
+};
 // ─── Styles (inline – no extra CSS file needed) ───────────────────────────────
 
-const styles: Record<string, React.CSSProperties> = {
+const baseStyles: Record<string, React.CSSProperties> = {
   wrapper: {
-    // background: "#b3e5fc",
     minHeight: "100vh",
     padding: "40px 16px 60px",
     fontFamily: "'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif",
@@ -188,16 +234,19 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0 auto",
   },
   card: {
-    background: "#ffffff",
-    border: "2px solid #000000",
+    // background: "#ffffff",
+    // border: "2px solid #000000",
     borderRadius: "8px",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
-    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+    // boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
     transition: "transform 0.2s ease, box-shadow 0.2s ease",
     cursor: "pointer",
   },
+  // darkcard: {
+  //   border: "2px solid #86FFBD",
+  // },
   imageBlock: {
     display: "grid",
     gridTemplateColumns: "1fr auto",
@@ -268,11 +317,6 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     gap: "4px",
   },
-  price: {
-    fontSize: "16px",
-    fontWeight: 800,
-    color: "#111",
-  },
   description: {
     fontSize: "12px",
     color: "#666",
@@ -282,9 +326,6 @@ const styles: Record<string, React.CSSProperties> = {
   },
   button: {
     marginTop: "12px",
-    background: "#111",
-    color: "#fff",
-    border: "none",
     borderRadius: "6px",
     padding: "11px 0",
     fontSize: "13px",
@@ -304,16 +345,16 @@ function Badge({ type }: { type: string[] }) {
       {type.map((t) => {
         const style =
           t === "Website"
-            ? styles.badgePick
+            ? baseStyles.badgePick
             : t === "App"
-              ? styles.badgeHall
+              ? baseStyles.badgeHall
               : t === "Data Analysis"
-                ? styles.badgePick
+                ? baseStyles.badgePick
                 : t === "AI"
-                  ? styles.badgeHall
+                  ? baseStyles.badgeHall
                   : t === "Data Science"
-                    ? styles.badgePick
-                    : styles.badgePick; // fallback
+                    ? baseStyles.badgePick
+                    : baseStyles.badgePick; // fallback
 
         const icon =
           t === "Website"
@@ -338,7 +379,15 @@ function Badge({ type }: { type: string[] }) {
   );
 }
 
-function CardItem({ card, index }: { card: Card; index: number }) {
+function CardItem({
+  card,
+  index,
+  theme,
+}: {
+  card: Card;
+  index: number;
+  theme: "light" | "dark";
+}) {
   useEffect(() => {
     const el = cardRef.current;
     if (!el) return;
@@ -359,6 +408,7 @@ function CardItem({ card, index }: { card: Card; index: number }) {
   }, []);
 
   const cardRef = useRef<HTMLDivElement | null>(null);
+  const t = themes[theme];
 
   useEffect(() => {
     const el = cardRef.current;
@@ -387,43 +437,51 @@ function CardItem({ card, index }: { card: Card; index: number }) {
       ref={cardRef}
       className="project-card"
       style={{
-        ...styles.card,
+        ...baseStyles.card,
+        ...t.card,
         transform: hovered ? "translateY(-4px)" : "none",
-        boxShadow: hovered
-          ? "0 8px 28px rgba(0,0,0,0.14)"
-          : "0 2px 12px rgba(0,0,0,0.08)",
+        boxShadow: hovered ? t.cardHover.boxShadow : t.card.boxShadow,
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {/* Image block */}
-      <div style={styles.imageBlock}>
-        <img src={card.image} alt={card.title} style={styles.mainImage} />
-        <div style={styles.thumbGrid}>
+      <div style={baseStyles.imageBlock}>
+        <img src={card.image} alt={card.title} style={baseStyles.mainImage} />
+        <div style={baseStyles.thumbGrid}>
           {card.thumbnails.map((t, i) => (
-            <img key={i} src={t} alt="" style={styles.thumb} />
+            <img key={i} src={t} alt="" style={baseStyles.thumb} />
           ))}
         </div>
       </div>
 
       {/* Body */}
-      <div style={styles.body}>
-        <p style={styles.numberTitle}>{card.title}</p>
+      <div style={baseStyles.body}>
+        <p style={{ ...baseStyles.numberTitle, ...t.numberTitle }}>
+          {card.title}
+        </p>
 
-        <div style={styles.badgeRow}>
+        <div style={baseStyles.badgeRow}>
           <Badge type={card.badge} />
         </div>
 
-        <p style={styles.description}>{card.description}</p>
+        <p style={{ ...baseStyles.description, ...t.description }}>
+          {card.description}
+        </p>
 
         <button
-          style={styles.button}
-          onMouseEnter={(e) =>
-            ((e.currentTarget as HTMLButtonElement).style.background = "#333")
-          }
-          onMouseLeave={(e) =>
-            ((e.currentTarget as HTMLButtonElement).style.background = "#111")
-          }
+          style={{ ...baseStyles.button, ...t.button }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.background =
+              t.buttonHover.background;
+            (e.currentTarget as HTMLButtonElement).style.color =
+              t.buttonHover.color;
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.background =
+              t.button.background;
+            (e.currentTarget as HTMLButtonElement).style.color = t.button.color;
+          }}
           onClick={() => goToUrl(card.link)}
         >
           Show Code
@@ -436,10 +494,13 @@ function CardItem({ card, index }: { card: Card; index: number }) {
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function CardGrid() {
+  const { theme } = useTheme();
+  const t = themes[theme];
+
   const visible = cards;
 
   return (
-    <div style={styles.wrapper}>
+    <div style={{ ...baseStyles.wrapper, ...t.wrapper }}>
       <style>{cardRevealStyle}</style>
       {/* Responsive grid via CSS-in-JS */}
       <style>{`
@@ -452,10 +513,9 @@ export default function CardGrid() {
           .card-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
-
-      <div className="card-grid" style={styles.grid}>
+      <div className="card-grid" style={baseStyles.grid}>
         {visible.map((card, index) => (
-          <CardItem key={card.id} card={card} index={index} />
+          <CardItem key={card.id} card={card} index={index} theme={theme} />
         ))}
       </div>
     </div>
