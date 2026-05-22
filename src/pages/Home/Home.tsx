@@ -98,6 +98,7 @@ const Home = () => {
           font-size: clamp(0.85rem, 2vw, 1rem);
           line-height: 1.8;
           font-family: 'Poppins', sans-serif;
+          padding: 0px 0px 0px 16px;
         }
 
         .exp-text {
@@ -178,21 +179,26 @@ const Home = () => {
           <div className="section-block" id="about">
             <Title text="About" id="about" />
             <p className="about-text">
-              My name is Manar Khamees, a recent graduate with a Bachelor's
-              degree in Computer Science from Umm Al Qura University. I have
-              experience in AI, data science, and machine learning, gained
-              through various boot-camps and training programs. I obtained an
-              HCIA—AI certificate from Huawei.
+              I’m Manar Khamees, a Computer Science graduate from Umm Al Qura
+              University with a strong passion for Artificial Intelligence, Data
+              Science, and Machine Learning. Through intensive bootcamps,
+              hands-on training programs, and self-driven learning, I’ve built
+              practical experience in developing intelligent solutions and
+              data-driven applications. I also earned the Huawei certification,
+              strengthening my foundation in AI technologies and concepts.
             </p>
             <p className="about-text">
-              My technical skills include Python, SQL, and various data analysis
-              and programming tools. I have completed projects involving
-              predictive analytics, computer vision, and web development.
+              My technical skill set includes Python, SQL, data analysis,
+              machine learning, and web development tools. I’ve worked on
+              projects involving predictive analytics, computer vision, and
+              AI-powered applications, where I enjoy transforming data into
+              meaningful insights and impactful solutions.
             </p>
             <p className="about-text">
-              In my free time, I usually paint 🎨, read 📖, participate in
-              hackathons 💻🥇, and continuously seek to expand my knowledge in
-              the tech field.
+              Beyond technology, I’m a curious and creative person who enjoys
+              painting 🎨, reading 📖, and participating in hackathons 💻🥇. I’m
+              always eager to learn new technologies, challenge myself, and grow
+              as a developer and problem-solver.
             </p>
           </div>
 
