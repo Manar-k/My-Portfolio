@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useTheme } from "../../components/ThemeContext";
 
 // images
+import crypto from "./img/Crypto Dashboard.png";
+import health from "./img/Manar_2026-May-12_Report-1.png";
 import alanna1 from "./img/alannapic1.png";
 import alanna2 from "./img/alannapic2.png";
 import alanna3 from "./img/alannapic3.png";
@@ -171,6 +173,26 @@ const cards: Card[] = [
     image: astro3,
     thumbnails: [astro1, astro2],
     link: "https://github.com/Manar-k/OpenGL_2d_scene_Astro-Boy",
+  },
+  {
+    id: 12,
+    title: "Crypto Overview Data Analysis",
+    description:
+      "The Crypto Overview Dashboard is built to answer several key questions that any crypto investor or analyst would ask on a daily basis.",
+    badge: ["Data Analysis"],
+    image: crypto,
+    thumbnails: [crypto, crypto],
+    link: "https://github.com/Manar-k/",
+  },
+  {
+    id: 12,
+    title: "Health Status Data Analysis",
+    description:
+      "Analyzing the health status of the population of the Kingdom of Saudi Arabia aged 15 and above, identifying the most influential variables, explaining the reasons for the results, linking the numbers together, and preparing an executive summary that highlights the most important findings of the data.",
+    badge: ["Data Analysis"],
+    image: health,
+    thumbnails: [health, health],
+    link: "https://datastudio.google.com/reporting/0d32db79-b41b-42e6-82de-8d8ad2da51c2/page/IwxxF",
   },
 ];
 // Theme
