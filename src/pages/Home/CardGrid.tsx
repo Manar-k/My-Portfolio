@@ -316,7 +316,7 @@ const baseStyles: Record<string, React.CSSProperties> = {
     marginTop: "2px",
   },
   badgePick: {
-    background: "#fff176",
+    // background: "#fff176",
     color: "#333",
     fontSize: "10px",
     fontWeight: 700,
@@ -327,18 +327,18 @@ const baseStyles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     gap: "4px",
   },
-  badgeHall: {
-    background: "#ffcc80",
-    color: "#333",
-    fontSize: "10px",
-    fontWeight: 700,
-    padding: "2px 7px",
-    borderRadius: "4px",
-    whiteSpace: "nowrap" as const,
-    display: "flex",
-    alignItems: "center",
-    gap: "4px",
-  },
+  // badgeHall: {
+  //   background: "#ffcc80",
+  //   color: "#333",
+  //   fontSize: "10px",
+  //   fontWeight: 700,
+  //   padding: "2px 7px",
+  //   borderRadius: "4px",
+  //   whiteSpace: "nowrap" as const,
+  //   display: "flex",
+  //   alignItems: "center",
+  //   gap: "4px",
+  // },
   description: {
     fontSize: "12px",
     color: "#666",
@@ -365,24 +365,26 @@ function Badge({ type }: { type: string[] }) {
   return (
     <div style={{ display: "flex", gap: "4px", flexWrap: "wrap" }}>
       {type.map((t) => {
-        const style =
-          t === "Website"
-            ? baseStyles.badgePick
+        const style = {
+          ...baseStyles.badgePick,
+          ...(t === "Website"
+            ? { backgroundColor: "#85c283" }
             : t === "App"
-              ? baseStyles.badgeHall
+              ? { backgroundColor: "#d85c6a" }
               : t === "Data Analysis"
-                ? baseStyles.badgePick
+                ? { backgroundColor: "#93bbdd" }
                 : t === "AI"
-                  ? baseStyles.badgeHall
+                  ? { backgroundColor: "#bd7cbe" }
                   : t === "Data Science"
-                    ? baseStyles.badgePick
-                    : baseStyles.badgePick; // fallback
+                    ? { backgroundColor: "#f5f5a8" }
+                    : { backgroundColor: "#d3d3d3" }),
+        };
 
         const icon =
           t === "Website"
-            ? "⭐"
+            ? "💻"
             : t === "App"
-              ? "🏅"
+              ? "📱"
               : t === "Data Analysis"
                 ? "📊"
                 : t === "AI"
