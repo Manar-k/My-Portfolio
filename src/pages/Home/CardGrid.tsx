@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTheme } from "../../components/ThemeContext";
 
 // images
+import rag from "./img/rag.png";
 import crypto from "./img/Crypto Dashboard.png";
 import health from "./img/Manar_2026-May-12_Report-1.png";
 import alanna1 from "./img/alannapic1.png";
@@ -185,7 +186,7 @@ const cards: Card[] = [
     link: "https://github.com/Manar-k/",
   },
   {
-    id: 12,
+    id: 13,
     title: "Health Status Data Analysis",
     description:
       "Analyzing the health status of the population of the Kingdom of Saudi Arabia aged 15 and above, identifying the most influential variables, explaining the reasons for the results, linking the numbers together, and preparing an executive summary that highlights the most important findings of the data.",
@@ -193,6 +194,16 @@ const cards: Card[] = [
     image: health,
     thumbnails: [health, health],
     link: "https://datastudio.google.com/reporting/0d32db79-b41b-42e6-82de-8d8ad2da51c2/page/IwxxF",
+  },
+  {
+    id: 14,
+    title: "Documents RAG Chatbot",
+    description:
+      "An artificial intelligence system that allows you to upload any PDF file and talk to it — you ask it questions in natural language and it answers you based solely on the content of the document.",
+    badge: ["AI"],
+    image: rag,
+    thumbnails: [rag, rag],
+    link: "https://github.com/Manar-k/RAG-Chatbot",
   },
 ];
 // Theme
