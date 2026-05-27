@@ -66,7 +66,7 @@ interface Card {
 const cards: Card[] = [
   {
     id: 1,
-    title: "Alanaa Website 👥",
+    title: "Alanaa Website",
     description:
       "Alanaa is a website designed to help supervisors manage trainee data by enabling them to view, add, modify, and delete information about trainees.",
     badge: ["Website"],
@@ -76,7 +76,7 @@ const cards: Card[] = [
   },
   {
     id: 2,
-    title: "Medad Website 🖋️",
+    title: "Medad Website",
     description:
       "Medad is a website that promotes the culture of Arabic calligraphy arts. Medad offers AI services, including Font Classification, Arabic OCR (Extract Text from Image), and Change Text Font.",
     badge: ["Website"],
@@ -86,7 +86,7 @@ const cards: Card[] = [
   },
   {
     id: 3,
-    title: "Hold My Hand App 📱",
+    title: "Hold My Hand App",
     description:
       "Hold My Hand is an IOS iPad application designed and implemented to help kids with autism express their feelings and learn how to communicate with others through simple story cards, playing audio, and matching images with words game.",
     badge: ["App"],
@@ -96,7 +96,7 @@ const cards: Card[] = [
   },
   {
     id: 4,
-    title: "Sales Analysis 📊",
+    title: "Sales Analysis",
     description:
       "AAL is a popular clothing brand in Australia. To support its growth, the CEO has asked to analyze its data. As a data scientist, I cleaned and prepared the data, analyzed sales trends, and created visualizations to present the findings.",
     badge: ["Data Analysis"],
@@ -106,7 +106,7 @@ const cards: Card[] = [
   },
   {
     id: 5,
-    title: "Birds Classification 🐦",
+    title: "Birds Classification",
     description:
       "I classified birds into 20 categories by training a model using a deep learning CNN.",
     badge: ["AI"],
@@ -116,7 +116,7 @@ const cards: Card[] = [
   },
   {
     id: 6,
-    title: "Invisibility Cloak 🧙‍♂️",
+    title: "Invisibility Cloak",
     description:
       "I created a Harry Potter's invisible cloak using an image processing technique called Color detection and segmentation. By (red) color detection, any object behind the scene will be invisible.",
     badge: ["AI"],
@@ -126,7 +126,7 @@ const cards: Card[] = [
   },
   {
     id: 7,
-    title: "Predicting Employee Turnover 📈",
+    title: "Predicting Employee Turnover",
     description:
       "Portobello Tech is an app innovator focused on predicting employee turnover. As an ML Developer, I checked data quality, conducted exploratory data analysis, implemented clustering, addressed class imbalance using the SMOTE technique, and predicted employee turnover.",
     badge: ["Data Science"],
@@ -136,7 +136,7 @@ const cards: Card[] = [
   },
   {
     id: 8,
-    title: "Marketing Campaigns 🛍️",
+    title: "Marketing Campaigns",
     description:
       "I analyzed marketing campaigns to understand what drives customer acquisition. As a data scientist, I prepared the data, explored it to identify trends, patterns, and relationships among the variables, and conducted hypothesis testing to validate assumptions and insights.",
     badge: ["Data Science"],
@@ -146,7 +146,7 @@ const cards: Card[] = [
   },
   {
     id: 9,
-    title: "ScienceQtech Employees 🏢",
+    title: "ScienceQtech Employees",
     description:
       "ScienceQtech is a data science startup involved in various projects. The HR department has requested reports on employee details and performance. As a Database Administrator, I analyzed the employee database.",
     badge: ["Data Analysis"],
@@ -156,7 +156,7 @@ const cards: Card[] = [
   },
   {
     id: 10,
-    title: "Explore US Bikeshare Data 🚲",
+    title: "Explore US Bikeshare Data",
     description:
       "I analyzed bike-share data from three major U.S. cities to compute descriptive statistics that uncover usage patterns and created an interactive terminal experience to present these statistics by taking input from the user.",
     badge: ["Data Analysis"],
@@ -166,7 +166,7 @@ const cards: Card[] = [
   },
   {
     id: 11,
-    title: "Astro Boy 2d Scene 🤖",
+    title: "Astro Boy 2d Scene",
     description:
       "I created a 2D scene featuring Astro Boy's face in three expressions: happy, sad, and surprised. and control its movements along the X, Y, and Z axes.",
     badge: ["App"],
@@ -256,19 +256,13 @@ const baseStyles: Record<string, React.CSSProperties> = {
     margin: "0 auto",
   },
   card: {
-    // background: "#ffffff",
-    // border: "2px solid #000000",
     borderRadius: "8px",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
-    // boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
     transition: "transform 0.2s ease, box-shadow 0.2s ease",
     cursor: "pointer",
   },
-  // darkcard: {
-  //   border: "2px solid #86FFBD",
-  // },
   imageBlock: {
     display: "grid",
     gridTemplateColumns: "1fr auto",
@@ -316,7 +310,6 @@ const baseStyles: Record<string, React.CSSProperties> = {
     marginTop: "2px",
   },
   badgePick: {
-    // background: "#fff176",
     color: "#333",
     fontSize: "10px",
     fontWeight: 700,
@@ -327,18 +320,6 @@ const baseStyles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     gap: "4px",
   },
-  // badgeHall: {
-  //   background: "#ffcc80",
-  //   color: "#333",
-  //   fontSize: "10px",
-  //   fontWeight: 700,
-  //   padding: "2px 7px",
-  //   borderRadius: "4px",
-  //   whiteSpace: "nowrap" as const,
-  //   display: "flex",
-  //   alignItems: "center",
-  //   gap: "4px",
-  // },
   description: {
     fontSize: "12px",
     color: "#666",
