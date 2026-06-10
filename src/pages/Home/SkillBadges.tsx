@@ -22,6 +22,8 @@ import xcode from "./img/Xcode.png";
 import swift from "./img/Swift.png";
 import adobeI from "./img/Adobe Illustrator.png";
 import opencv from "./img/OpenCV.png";
+import dotnet from "./img/dotnet.png";
+import powerbi from "./img/powerbi.png";
 import { useEffect, useRef } from "react";
 const scrollRevealStyle = `
   @keyframes badgeFadeIn {
@@ -73,6 +75,8 @@ const skills = [
   { label: "Swift", icon: swift },
   { label: "Adobe Illustrator", icon: adobeI },
   { label: "OpenCV", icon: opencv },
+  { label: ".NET", icon: dotnet },
+  { label: "PowerBI", icon: powerbi },
 ];
 
 export default function SkillBadges({ filter }: SkillBadgesProps) {

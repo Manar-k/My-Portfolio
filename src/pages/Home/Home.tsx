@@ -224,6 +224,42 @@ const Home = () => {
           <div className="section-block" id="Experiences">
             <Title text="Experiences" id="Experiences" />
 
+            {/* Experience 3 */}
+            <div className="exp-row">
+              <div className="exp-date">
+                <strong className="date-text">MAR 2026 – Present</strong>
+              </div>
+              <div className="exp-content">
+                <p className="exp-text">
+                  <strong>
+                    Business Intelligence Specialist - Tamheer Trainee
+                    <br />
+                    <span className={style.subtxt}>Balsam Medical Care - Riyadh</span>
+                  </strong>
+                </p>
+                <p className="exp-text">
+                  Conducted business intelligence and data analysis using Power BI and SQL 
+                  to support strategic decision-making within a healthcare environment.
+                   Developed interactive dashboards to track KPIs, patient flow, OPD performance, 
+                   and overall hospital operations. Applied a strong understanding of 
+                   healthcare workflows, including patient registration, billing, and 
+                   clinical processes, to identify opportunities for process improvement.
+                    Designed OPD flowcharts to optimize operational efficiency and enhance service quality, 
+                  while transforming and cleaning JSON data into structured Excel datasets 
+                  to facilitate accurate reporting and data integration.
+                </p>
+                <SkillBadges
+                  filter={[
+                    "SQL",
+                    "NumPy",
+                    ".NET",
+                    "Python",
+                    "PowerBI",
+                  ]}
+                />
+              </div>
+            </div>
+
             {/* Experience 1 */}
             <div className="exp-row">
               <div className="exp-date">
@@ -234,7 +270,7 @@ const Home = () => {
                   <strong>
                     Trainee at AI & Data Science SDAIA T5 Bootcamp
                     <br />
-                    <span className={style.subtxt}>On Site - Riyadh</span>
+                    <span className={style.subtxt}>Data and Artificial Intelligence Authority - Riyadh</span>
                   </strong>
                 </p>
                 <p className="exp-text">
