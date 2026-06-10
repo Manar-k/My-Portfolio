@@ -522,6 +522,9 @@ export default function CardGrid() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&display=swap');
         * { box-sizing: border-box; }
+        *, *::before, *::after {
+              font-family: 'Poppins', sans-serif !important;
+      }
         @media (max-width: 500px) {
           .card-grid { grid-template-columns: 1fr !important; }
         }

@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   const SendEmail = () => {
-    const encodedSubject = encodeURIComponent("Hi, I wanna hire you 🎉");
+    const encodedSubject = encodeURIComponent("A Job Opportunity :)");
     const mailtoLink = `mailto:manar_khamees@outlook.com?subject=${encodedSubject}`;
     window.location.href = mailtoLink;
   };
@@ -28,10 +28,22 @@ const Home = () => {
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
 
         * { box-sizing: border-box; }
+        *, *::before, *::after {
+              font-family: 'Poppins', sans-serif !important;
+      }
 
         body {
           font-family: 'Poppins', sans-serif !important;
         }
+          button, input, select, textarea {
+    font-family: 'Poppins', sans-serif !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+    b, strong {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700;
+  }
 
         .hero-row {
           display: flex;

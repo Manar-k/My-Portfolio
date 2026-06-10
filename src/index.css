@@ -1,26 +1,57 @@
-*{
-    font-family: "inter";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+html,
+body,
+#root {
+    font-family: 'Poppins', sans-serif;
 }
+
+/* iOS Safari ignores inheritance for these elements */
+button,
+input,
+select,
+textarea,
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* * {
+    font-family: "inter";
+} */
+
 .container {
     display: flex;
-    flex-direction: column; /* Stack child elements vertically */
-    gap: 200px; /* Space between child elements */
+    flex-direction: column;
+    /* Stack child elements vertically */
+    gap: 200px;
+    /* Space between child elements */
 }
+
 body.light {
     background-color: #ffffff;
     color: #000000;
 }
-  
+
 body.dark {
     background-color: #1a1a1a;
     color: #ffffff;
 }
-p{
+
+p {
     color: #000;
 }
-.light p{
-    color: #000;  
+
+.light p {
+    color: #000;
 }
-.dark p{
-    color: #ffffff;  
+
+.dark p {
+    color: #ffffff;
 }
