@@ -7,6 +7,7 @@ import CardGrid from "./CardGrid";
 import SkillBadges from "./SkillBadges";
 import { useState } from "react";
 import { ThemeProvider } from "../../components/ThemeContext";
+import CardCerti from "./CardCerti";
 
 const Home = () => {
   const [themeapply, setThemeapply] = useState<string>("dark");
@@ -152,7 +153,7 @@ const Home = () => {
                 <strong className={style.colored}>Manar</strong> Khamees.
               </p>
               <p className="hero-subtitle">
-                AI Engineer | Data Scientist | Data Analyst | Web Developer👩‍💻.
+              AI Engineer | BI Specialist | Data Analyst | Data Scientist | Web Developer👩‍💻.
               </p>
               <div className={style.btnsty}>
                 <button
@@ -207,6 +208,12 @@ const Home = () => {
               in analytics technologies
                and always eager to contribute to impactful, data-driven initiatives.
             </p>
+          </div>
+
+          {/* ── Certificates ── */}
+          <div className="section-block" id="Certificates">
+            <Title text="Certificates" id="Certificates" />
+            <CardCerti/>
           </div>
 
           {/* ── Projects ── */}
