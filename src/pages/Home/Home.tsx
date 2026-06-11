@@ -149,13 +149,10 @@ const Home = () => {
           <div className="hero-row" id="home" style={{ marginTop: "70px" }}>
             <div className="hero-text">
               <p className="hero-title">
-                Hello👋, My
-                <br />
-                Name is <strong className={style.colored}>Manar</strong>.
+                <strong className={style.colored}>Manar</strong> Khamees.
               </p>
               <p className="hero-subtitle">
-                I'm an AI Engineer, Data Scientist, and Creative Web Developer
-                👩‍💻.
+                AI Engineer | Data Scientist | Data Analyst | Web Developer👩‍💻.
               </p>
               <div className={style.btnsty}>
                 <button
@@ -191,26 +188,24 @@ const Home = () => {
           <div className="section-block" id="about">
             <Title text="About" id="about" />
             <p className="about-text">
-              I’m Manar Khamees, a Computer Science graduate from Umm Al Qura
-              University with a strong passion for Artificial Intelligence, Data
-              Science, and Machine Learning. Through intensive bootcamps,
-              hands-on training programs, and self-driven learning, I’ve built
-              practical experience in developing intelligent solutions and
-              data-driven applications. I also earned the Huawei certification,
-              strengthening my foundation in AI technologies and concepts.
+              Hi, I'm Manar Khamees, a Business Intelligence Specialist based in Riyadh, Saudi Arabia.
+               I have a background in Computer Science and practical experience in healthcare analytics,
+                where I develop Power BI dashboards, 
+              perform SQL-based analysis, and support data-driven decision-making.
             </p>
             <p className="about-text">
-              My technical skill set includes Python, SQL, data analysis,
-              machine learning, and web development tools. I’ve worked on
-              projects involving predictive analytics, computer vision, and
-              AI-powered applications, where I enjoy transforming data into
-              meaningful insights and impactful solutions.
+              My interests lie at the intersection of business intelligence, 
+              data analytics, and artificial intelligence. Through professional 
+              experience and projects, I have worked on predictive models, 
+              interactive reporting solutions, 
+              and AI-powered applications that address real business challenges.
             </p>
             <p className="about-text">
-              Beyond technology, I’m a curious and creative person who enjoys
-              painting 🎨, reading 📖, and participating in hackathons 💻🥇. I’m
-              always eager to learn new technologies, challenge myself, and grow
-              as a developer and problem-solver.
+              I enjoy transforming raw data into meaningful insights 
+              that help organizations improve performance, streamline processes, 
+              and make informed decisions. I'm continuously expanding my expertise 
+              in analytics technologies
+               and always eager to contribute to impactful, data-driven initiatives.
             </p>
           </div>
 

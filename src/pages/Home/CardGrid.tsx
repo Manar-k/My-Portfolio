@@ -224,9 +224,9 @@ const themes = {
     buttonHover: { background: "#ffffff", color: "#86FFBD" },
   },
   dark: {
-    wrapper: { background: "#1a1a1a" },
+    wrapper: { background: "#000000" },
     card: {
-      background: "#1a1a1a",
+      background: "#000000",
       border: "2px solid #86FFBD",
       boxShadow: "0 2px 16px rgba(134,255,189,0.10)",
     },
@@ -239,7 +239,7 @@ const themes = {
       border: "2px solid #86FFBD",
     },
     button: {
-      background: "#1a1a1a",
+      background: "#000000",
       color: "#86FFBD",
       border: "3px solid #ffffff",
     },
