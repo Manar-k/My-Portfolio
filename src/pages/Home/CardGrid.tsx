@@ -66,14 +66,14 @@ interface Card {
 // ─── Mock Data ────────────────────────────────────────────────────────────────
 const cards: Card[] = [
   {
-    id: 1,
-    title: "Alanaa Website",
+    id: 13,
+    title: "Health Status Data Analysis",
     description:
-      "Alanaa is a website designed to help supervisors manage trainee data by enabling them to view, add, modify, and delete information about trainees.",
-    badge: ["Website"],
-    image: alanna2,
-    thumbnails: [alanna1, alanna3],
-    link: "https://github.com/Manar-k",
+      "Analyzing the health status of the population of the Kingdom of Saudi Arabia aged 15 and above, identifying the most influential variables, explaining the reasons for the results, linking the numbers together, and preparing an executive summary that highlights the most important findings of the data.",
+    badge: ["Data Analysis"],
+    image: health,
+    thumbnails: [health, health],
+    link: "https://datastudio.google.com/reporting/0d32db79-b41b-42e6-82de-8d8ad2da51c2/page/IwxxF",
   },
   {
     id: 2,
@@ -186,14 +186,14 @@ const cards: Card[] = [
     link: "https://github.com/Manar-k/",
   },
   {
-    id: 13,
-    title: "Health Status Data Analysis",
+    id: 1,
+    title: "Alanaa Website",
     description:
-      "Analyzing the health status of the population of the Kingdom of Saudi Arabia aged 15 and above, identifying the most influential variables, explaining the reasons for the results, linking the numbers together, and preparing an executive summary that highlights the most important findings of the data.",
-    badge: ["Data Analysis"],
-    image: health,
-    thumbnails: [health, health],
-    link: "https://datastudio.google.com/reporting/0d32db79-b41b-42e6-82de-8d8ad2da51c2/page/IwxxF",
+      "Alanaa is a website designed to help supervisors manage trainee data by enabling them to view, add, modify, and delete information about trainees.",
+    badge: ["Website"],
+    image: alanna2,
+    thumbnails: [alanna1, alanna3],
+    link: "https://github.com/Manar-k",
   },
   {
     id: 14,
@@ -291,7 +291,7 @@ const baseStyles: Record<string, React.CSSProperties> = {
     display: "grid",
     gridTemplateColumns: "1fr",
     gridTemplateRows: "1fr 1fr",
-    gap: "2px",
+    gap: "0px",
     width: "90px",
     height: "180px",
   },
