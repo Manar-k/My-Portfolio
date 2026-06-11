@@ -509,11 +509,16 @@ function CardItem({
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export default function CardGrid() {
+export default function CardGrid({ filter }: { filter?: string | null }) {
   const { theme } = useTheme();
   const t = themes[theme];
 
-  const visible = cards;
+  const visible = filter
+    ? [
+        ...cards.filter((c) => c.badge.includes(filter)),
+        ...cards.filter((c) => !c.badge.includes(filter)),
+      ]
+    : cards;
 
   return (
     <div style={{ ...baseStyles.wrapper, ...t.wrapper }}>

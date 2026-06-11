@@ -169,3 +169,36 @@ input:checked+.slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
+.projectMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.projectSubmenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #111;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.projectMenu:hover .projectSubmenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.projectSubmenu.light {
+  background: #ffffff;
+  border: 3px solid #000000;
+}

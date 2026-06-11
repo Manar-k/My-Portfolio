@@ -10,6 +10,7 @@ import { ThemeProvider } from "../../components/ThemeContext";
 import CardCerti from "./CardCerti";
 
 const Home = () => {
+  const [projectFilter, setProjectFilter] = useState<string | null>(null);
   const [themeapply, setThemeapply] = useState<string>("dark");
   const receiveTheme = (thm: string) => {
     setThemeapply(thm);
@@ -142,7 +143,8 @@ const Home = () => {
       `}</style>
 
       <ThemeProvider>
-        <Navbar sendTheme={receiveTheme} />
+        {/* <Navbar sendTheme={receiveTheme} /> */}
+        <Navbar sendTheme={receiveTheme} onProjectFilter={(f) => { setProjectFilter(f); }} />
 
         <div
           style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 16px" }}
@@ -219,7 +221,7 @@ const Home = () => {
           {/* ── Projects ── */}
           <div className="section-block" id="Projects">
             <Title text="Projects" id="Projects" />
-            <CardGrid />
+            <CardGrid filter={projectFilter} />
           </div>
 
           {/* ── Experiences ── */}
