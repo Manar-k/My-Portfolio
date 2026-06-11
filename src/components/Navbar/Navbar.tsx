@@ -5,7 +5,7 @@ import { useEffect } from "react";
 // light and dark mode
 import { useTheme } from "../ThemeContext";
 
-interface Props2 {
+interface Props {
   sendTheme: (thm: string) => void;
   onProjectFilter: (filter: string | null) => void;  // ADD THIS
 }
@@ -13,7 +13,7 @@ interface Props2 {
 interface Props {
   sendTheme: (thm: string) => void;
 }
-const Navbar = ({ sendTheme, onProjectFilter }: Props2) => {
+const Navbar = ({ sendTheme, onProjectFilter }: Props) => {
   const { theme, toggleTheme } = useTheme();
   useEffect(() => {
     document.body.className = theme; // Apply the theme class to the body
