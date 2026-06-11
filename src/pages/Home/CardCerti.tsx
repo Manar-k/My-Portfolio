@@ -176,24 +176,47 @@ function CertiCardItem({
   const [hovered, setHovered] = useState(false);
   const t = themes[theme];
 
+  // useEffect(() => {
+  //   const el = cardRef.current;
+  //   if (!el) return;
+
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         el.style.animationDelay = `${index * 80}ms`;
+  //         el.classList.add("revealed");
+  //         // observer.unobserve(el);
+  //       }
+  //     },
+  //     { threshold: 0.1 }
+  //   );
+
+  //   observer.observe(el);
+  //   return () => observer.disconnect();
+  // }, [index]);
   useEffect(() => {
-    const el = cardRef.current;
-    if (!el) return;
+  const el = cardRef.current;
+  if (!el) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.style.animationDelay = `${index * 80}ms`;
-          el.classList.add("revealed");
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.1 }
-    );
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        // Reset animation so it can replay
+        el.classList.remove("revealed");
+        el.style.animationDelay = `${index * 80}ms`;
+        // Force reflow so the browser registers the class removal
+        void el.offsetWidth;
+        el.classList.add("revealed");
+      } else {
+        el.classList.remove("revealed");
+      }
+    },
+    { threshold: 0.1 }
+  );
 
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [index]);
+  observer.observe(el);
+  return () => observer.disconnect();
+}, [index]);
 
   const handleClick = () => {
     if (card.link) window.open(card.link, "_blank");
